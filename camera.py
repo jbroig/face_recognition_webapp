@@ -8,6 +8,7 @@ import face_recognition
 import numpy as np
 import pickle
 
+
 data = pickle.loads(open("encodings.pickle", "rb").read())
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
@@ -89,5 +90,3 @@ class VideoCamera(object):
 
         ret, jpeg = cv2.imencode('.jpg', frame)
         return jpeg.tobytes()
-
-        
